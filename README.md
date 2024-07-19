@@ -58,7 +58,7 @@ If you're using Laravel 7.5, this is all there is to do.
 
 <h2>Usage examples</h2>
 
-<h4>Searching and applying for hostels(Prospective Student Module)</h4>!
+<h4>Searching and applying for hostels(Prospective Student Module)</h4>
 <ul>
 <li>login to the account</li>
 <li>Go to the properties page use filters to find your ideal hostel.</li>
@@ -67,8 +67,6 @@ If you're using Laravel 7.5, this is all there is to do.
 </ul>
 
 <h4>Managing Hostel info and Communicating with Residents (Hostel Manager Module)</h4>
-![Screenshot 2024-07-13 143550](https://github.com/user-attachments/assets/9331c8f8-41eb-4e27-abba-7657aaa5bae0)
-
 <ul>
 <li>login to the account</li>
 <li>Go to dashboard</li>
@@ -83,7 +81,7 @@ If you're using Laravel 7.5, this is all there is to do.
 <ul>
 <li>login to the account</li>
 <li>Go to dashboard</li>
-<li>Look through hostel managers and determine who to accept into the system and who to remove</li>![Screenshot 2024-07-13 143938](https://github.com/user-attachments/assets/93d147d2-44ed-4608-9328-8284190484c8)
+<li>Look through hostel managers and determine who to accept into the system and who to remove</li>
 </ul>
 
 <h2>Project Structure</h2>

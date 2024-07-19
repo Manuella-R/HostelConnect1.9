@@ -24,6 +24,24 @@
       0 => 'Fruitcake\\Cors\\CorsServiceProvider',
     ),
   ),
+  'gathuku/laravelmpesa' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Gathuku\\Mpesa\\MpesaServiceProvider',
+    ),
+    'aliases' => 
+    array (
+      'Mpesa' => 'Gathuku\\Mpesa\\Facades\\Mpesa',
+    ),
+  ),
+  'icehouse-ventures/laravel-chartjs' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Fx3costa\\LaravelChartJs\\Providers\\ChartjsServiceProvider',
+    ),
+  ),
   'laravel/tinker' => 
   array (
     'providers' => 

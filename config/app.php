@@ -160,6 +160,7 @@ return [
         Illuminate\Session\SessionServiceProvider::class,
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
+        IcehouseVentures\LaravelChartjs\Providers\ChartjsServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
 
         /*
@@ -225,6 +226,7 @@ return [
         'Str' => Illuminate\Support\Str::class,
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
+        'Mpesa' => Gathuku\Mpesa\Facades\Mpesa::class,
         'View' => Illuminate\Support\Facades\View::class,
 
     ],

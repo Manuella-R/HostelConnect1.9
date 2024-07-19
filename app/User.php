@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'first_name','last_name', 'email', 'password','Schoolname','AdmNo','DOB','is_active','email_verification_code','email_verified_at'
+        'first_name','last_name', 'email','invitation_token', 'password','is_active','email_verification_code','email_verified_at','establishment_name','phone_number','photo_proof','is_resident','user_role_id'
     ];
 
     /**
@@ -28,10 +28,20 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-     public function userDescription()
+    public function userDescription()
     {
-        return $this->hasOne(UserDescription::class, 'user_id');
+        return $this->hasOne(UserDescription::class,  'user_id', 'id');
     }
+    public function hostel()
+{
+    return $this->hasOne(Hostel::class, 'user_id'); // Adjust based on your actual relationship
+}
+public function resident()
+    {
+        return $this->hasOne(Resident::class, 'user_id', 'id');
+    }
+
+
     /**
      * The attributes that should be cast to native types.
      *
@@ -40,5 +50,4 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-   
 }

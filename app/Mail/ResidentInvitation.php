@@ -3,24 +3,29 @@
 namespace App\Mail;
 
 use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
+use App\User;
+use App\Hostel;
 
-class EmailVerificationMail extends Mailable
+class ResidentInvitation extends Mailable
 {
     use Queueable, SerializesModels;
+
     public $user;
-    
+    public $hostel;
+    public $token;
+
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct($user)
+    public function __construct(User $user, Hostel $hostel, $token)
     {
-        $this->user=$user;
-        
+        $this->user = $user;
+        $this->hostel = $hostel;
+        $this->token = $token;
     }
 
     /**
@@ -30,8 +35,7 @@ class EmailVerificationMail extends Mailable
      */
     public function build()
     {
-        return $this->markdown('emails.auth.email_verification_mail')->with([
-            'user'=>$this->user
-        ]);
+        return $this->view('emails.resident_invitation')
+                    ->subject('Hostel Invitation');
     }
 }

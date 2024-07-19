@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class UserDescription extends Model
 {
     protected $fillable = [
-        'user_id', 'gender', 'age', 'current_year_of_university', 'personality', 'neighbor_expectations', 'self_description', 'additional_info',
+        'description_id','user_id', 'gender', 'admission_number' , 'personality', 'describe_yourself',
     ];
 
     // Define the inverse relationship with User

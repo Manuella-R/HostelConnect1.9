@@ -30,20 +30,15 @@
           <span class="text-danger">{{ $errors->first('gender') }}</span>
         @endif
       </div>
+     
       <div class="form-group">
-        <label for="age">Age</label>
-        <input type="number" name="age" value="{{ old('age', $UserDescription->age ?? '') }}" class="form-control" id="age" placeholder="Enter age">
-        @if($errors->has('age'))
-          <span class="text-danger">{{ $errors->first('age') }}</span>
+        <label for="admission_number">Admission number</label>
+        <input type="number" name="admission_number" value="{{ old('admission_number', $UserDescription->admission_number ?? '') }}" class="form-control" id="admission_number" placeholder="Enter your admission number">
+        @if($errors->has('admission_number'))
+          <span class="text-danger">{{ $errors->first('admission_number') }}</span>
         @endif
       </div>
-      <div class="form-group">
-        <label for="current_year_of_university">Current Year of University</label>
-        <input type="text" name="current_year_of_university" value="{{ old('current_year_of_university', $UserDescription->current_year_of_university ?? '') }}" class="form-control" id="current_year_of_university" placeholder="Enter current year of university">
-        @if($errors->has('current_year_of_university'))
-          <span class="text-danger">{{ $errors->first('current_year_of_university') }}</span>
-        @endif
-      </div>
+     
       <div class="form-group">
         <label for="personality">Personality</label>
         <textarea name="personality" value="{{ old('personality', $UserDescription->personality ?? '') }}" class="form-control" id="personality" placeholder="Describe your personality"></textarea>
@@ -51,25 +46,12 @@
           <span class="text-danger">{{ $errors->first('personality') }}</span>
         @endif
       </div>
+      
       <div class="form-group">
-        <label for="neighbor_expectations">Neighbor Expectations</label>
-        <textarea name="neighbor_expectations"  value="{{ old('neighbor_expectations', $UserDescription->neighbor_expectations ?? '') }}"class="form-control" id="neighbor_expectations" placeholder="Describe your neighbor expectations"></textarea>
-        @if($errors->has('neighbor_expectations'))
-          <span class="text-danger">{{ $errors->first('neighbor_expectations') }}</span>
-        @endif
-      </div>
-      <div class="form-group">
-        <label for="self_description">Self Description</label>
-        <textarea name="self_description" value="{{ old('self_description',  $UserDescription->self_description ?? '') }}" class="form-control" id="self_description" placeholder="Describe yourself"></textarea>
-        @if($errors->has('self_description'))
-          <span class="text-danger">{{ $errors->first('self_description') }}</span>
-        @endif
-      </div>
-      <div class="form-group">
-        <label for="additional_info">Additional Info</label>
-        <textarea name="additional_info" value="{{ old('additional_info', $UserDescription->additional_info ?? '') }}" class="form-control" id="additional_info" placeholder="Additional information"></textarea>
-        @if($errors->has('additional_info'))
-          <span class="text-danger">{{ $errors->first('additional_info') }}</span>
+        <label for="describe_yourself">description</label>
+        <textarea name="additional_info" value="{{ old('describe_yourself', $UserDescription->describe_yourself ?? '') }}" class="form-control" id="describe_yourself" placeholder="Describe yourself and how you'd socialize with fellow hostel members"></textarea>
+        @if($errors->has('describe_yourself'))
+          <span class="text-danger">{{ $errors->first('describe_yourself') }}</span>
         @endif
       </div>
       <button type="submit" class="btn btn-primary">Update Profile</button>

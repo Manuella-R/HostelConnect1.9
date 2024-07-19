@@ -1,7 +1,7 @@
 @extends('profile.profile-layout')
 @section('profile')
  <div class="card">
-	<div class="card-header">Update Profile</div>
+<div class="card-header">Update Profile</div>
 	<div class="card-body">
 		<form action="{{route('update_profile')}}" id="edit_profile_form" method="post">
 			@csrf
@@ -20,27 +20,6 @@
 				<span class="text-danger">{{$errors->first('last_name')}}</span>
 			   @endif
 			  </div>
-			  <div class="form-group">
-			    <label for="Schoolname">School Name</label>
-			    <input type="text" name="Schoolname" value="{{(old('Schoolname'))?old('Schoolname'):$user->Schoolname}}"  class="form-control" id="Schoolname"  placeholder="Enter your school name">
-        	   @if($errors->any('Schoolname'))
-				<span class="text-danger">{{$errors->first('Schoolname')}}</span>
-			   @endif
-			  </div>
-			  <div class="form-group">
-			    <label for="AdmNo">Admission number</label>
-			    <input type="text" name="AdmNo" value="{{(old('AdmNo'))?old('AdmNo'):$user->AdmNo}}"  class="form-control" id="first_name"  placeholder="Enter first name">
-        	   @if($errors->any('AdmNo'))
-				<span class="text-danger">{{$errors->first('AdmNo')}}</span>
-			   @endif
-			  </div>
-			  <div class="form-group">
-			    <label for="DOB">Date of Birth</label>
-			    <input type="text" name="DOB" value="{{(old('DOB'))?old('DOB'):$user->DOB}}"  class="form-control" id="DOB"  placeholder="Enter first name">
-        	   @if($errors->any('DOB'))
-				<span class="text-danger">{{$errors->first('DOB')}}</span>
-			   @endif
-			  </div>
 	
 		    <button type="submit" class="btn btn-primary">Update</button>
 		</form>
@@ -48,15 +27,5 @@
 	</div>
 
 </div>
-<script>
-$(document).ready(function() {
-        $(".datepicker").datepicker({
-            dateFormat: 'yy-mm-dd', // Format the date as YYYY-MM-DD
-            changeMonth: true, // Allow changing the month
-            changeYear: true, // Allow changing the year
-            yearRange: "1900:2100" // Specify the year range
-        });
-    });
-</script>
 
 @endsection

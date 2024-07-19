@@ -53,32 +53,6 @@
         <span class="text-danger">{{$errors->first('confirm_password')}}</span>
       @endif
       </div>
-      
-      <div class="form-group">
-			    <label for="last_name">School Name</label>
-			    <input type="text" class="form-control" value="{{old('Schoolname')}}" name="Schoolname" id="Schoolname" placeholder="School Name">
-			    @if($errors->any('Schoolname'))
-					<span class="text-danger">{{$errors->first('Schoolname')}}</span>
-				@endif
-			  </div>
-     	   	
-				
-	     	  <div class="form-group">
-			    <label for="last_name">Admission number</label>
-			    <input type="text" class="form-control" value="{{old('AdmNo')}}" name="AdmNo" id="AdmNo" placeholder="Admission number">
-			    @if($errors->any('AdmNo'))
-					<span class="text-danger">{{$errors->first('AdmNo')}}</span>
-				@endif
-			  </div>
-     	   
-			
-			<div class="form-group">
-                <label for="DOB">Date of Birth</label>
-                <input type="text" class="form-control datepicker" value="{{ old('DOB') }}" name="DOB" id="DOB" placeholder="Date of Birth">
-                @if($errors->any('DOB'))
-                   <span class="text-danger">{{ $errors->first('DOB') }}</span>
-                 @endif
-            </div>
        <div class="form-check">
         <input type="checkbox" {{(old('terms'))?'checked':''}} name="terms" id="terms" class="form-check-input" >
         <label class="form-check-label" for="terms_check">Check our <a href="#">terms</a> and <a href="#">conditions</a></label>
@@ -92,20 +66,13 @@
        <div><button type="submit" class="btn btn-primary mt-2">Submit</button>&nbsp; Already have an account <a class="login_button" href="javascript:void(0)">sign in</a> here</div>
   </form> 
 </div>
-</div>
+
+
+
+      </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
       </div>
     </div>
   </div>
 </div>
-<script>
-$(document).ready(function() {
-        $(".datepicker").datepicker({
-            dateFormat: 'yy-mm-dd', // Format the date as YYYY-MM-DD
-            changeMonth: true, // Allow changing the month
-            changeYear: true, // Allow changing the year
-            yearRange: "1900:2100" // Specify the year range
-        });
-    });
-</script>

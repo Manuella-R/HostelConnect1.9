@@ -30,8 +30,7 @@
 
 		  </div>
 
-		   
-		   <div><button type="submit" class="btn btn-primary mt-2">Submit</button>&nbsp; Don't have an account <a href="{{route('getRegister')}}">sign up</a> here</div>
+		   <div><button type="submit" class="btn btn-primary mt-2">Submit</button>
 
 		   <div> <a href="{{route('getForgetPassword')}}">Forget Password</a></div>
 
